@@ -1,0 +1,37 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'register/css/reg.css' %}">
+
+	<title>Регестрация</title>
+</head>
+<body>
+	 
+	<div id="panel">
+		<div class="shapochka">	
+			<p class="gogo">Регестрация</p>
+		</div>
+	{% block reg %}	
+
+		<div class="vazhnosti">
+	
+			<form method="post">
+				{% csrf_token %}
+				
+				{{ form.login }}<br>
+				{{ form.password }}<br>
+				<button type="submit" class="but-but">Зарегестрироваться</button>
+			</form>
+
+		</div>
+		{% endblock %}
+	</div>
+	<a href="{% url 'start' %}" class="bt-back">На главную</a>
+</body>
+</html>

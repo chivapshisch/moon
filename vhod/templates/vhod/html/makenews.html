@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Выложить статью</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.title }}<br>
+		{{ form.main_text }}<br>
+		{{ form.author }}<br>
+		{{ error }}
+		<button type="submit" class="tototot">Добавить</button>
+
+	</form>
+</body>
+</html>

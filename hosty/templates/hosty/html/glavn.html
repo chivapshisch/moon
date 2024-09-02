@@ -1,0 +1,42 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}Главная{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'hosty/css/main.css' %}">
+</head>
+<body>
+	 
+	<div id="shapka">
+		<a href="{% url 'new' %}" class="shmi">Новости</a>
+		<a href="{% url 'reg' %}" class="shmi">Зарегестрироваться</a>
+		<a href="{% url 'vhod' %}" class="shmi">Войти</a>
+		<a href="{% url 'podz' %}" class="shmi">Поддержка</a>
+		<a href="{% url 'start' %}" class="shmi">Главная</a>
+	
+	</div>
+
+	{% block cont %}
+	<div id="repka">
+		<p class="tit">Панель навигации</p><br>
+		<p class="tit">Здесь вы можете опубликовать свои статьи или задать вопрос. Для того чтобы быть автором или задавать вопросы необходимо пройти регестрацию. При возникновении вопросов пользования сайта пишите в поддержку. Относитесь с уважением ко всем пользователям ;)</p>
+	</div>
+
+	<div id="zamk">
+		<p class="totle">Наши партнеры</p>
+		<div class="parterns">
+			<span class="popi">Администратор: </span>
+			<a href="https://t.me/chivapshisch" class="popi">Главный чивапчич</a>
+			<span class="popa">Ещё я: </span>
+			<a href="https://t.me/chivapshisch" class="popa">Главный чивапчич</a><br>
+		</div>
+	</div>
+	{% endblock %}
+	
+</body>
+</html>

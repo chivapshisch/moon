@@ -1,0 +1,25 @@
+{% extends 'hosty/html/glavn.html' %}
+
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+
+{% block cont %}
+
+
+	{% for i in data %}
+		<div id="telo">
+			<div class="square">
+				<p class="novosti-tit">{{i.title}}</p>
+				
+				<p class="novosti-author">{{i.author}}</p>
+				<a href = "{% url 'news-detail' i.id %}" class = "novosti-author">Читать дальше</a>
+			</div>
+		</div>
+
+
+	{% endfor %}
+
+{% endblock %}
+

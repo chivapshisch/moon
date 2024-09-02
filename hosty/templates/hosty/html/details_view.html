@@ -1,0 +1,17 @@
+{% extends 'hosty/html/glavn.html' %}
+
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+
+{% block cont %}
+
+	<div id="rock">
+		<p class="nomer-tit">{{ novost.title }}</p>
+		<p class="nomer">{{ novost.main_text }}</p>
+		<p class="nomer-author">{{ novost.author }}</p>
+	</div>
+
+	
+{% endblock %}
