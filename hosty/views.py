@@ -17,5 +17,7 @@ class NewsDetailView(DetailView):
 	context_object_name = 'novost'
 
 
+	print('fff')
+
 def podderzhka(request): 
 	return render(request, "hosty/html/podz.html")
